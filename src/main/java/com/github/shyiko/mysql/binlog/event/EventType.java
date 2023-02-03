@@ -254,4 +254,8 @@ public enum EventType {
         }
         return null;
     }
+
+    public int getEventNumber() {
+        return eventNumber;
+    }
 }
