@@ -26,10 +26,12 @@ public class ProfileMain {
         AsyncProfiler profiler = AsyncProfiler.getInstance();
         System.out.println(profiler.execute("version"));
 
-        startWithOriginalGtidSet();
-        startWithOriginalGtidSetWithoutStrings();
-        startWithNewGtidSet();
-        startWithNewGtidSetAndNewEventHeaderDeserializer();
+        for (int i = 0; i < 10; i++) {
+            startWithOriginalGtidSet();
+            startWithOriginalGtidSetWithoutStrings();
+            startWithNewGtidSet();
+            startWithNewGtidSetAndNewEventHeaderDeserializer();
+        }
 
         System.out.println(profiler.execute("start,event=cpu,interval=1000"));
         startWithOriginalGtidSet();
